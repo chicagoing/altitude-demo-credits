@@ -1,0 +1,162 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Movie Credits  Live Preview</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue:400">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%;
+        }
+        body {
+            background: #000;
+            color: #fff;
+            font: 400 30px/1 'Bebas Neue', sans-serif;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+        }
+
+        .wrapper {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: 25s credits linear 1;
+            animation-delay: 10s;
+            left: 50%;
+            margin-left: -400px;
+            position: absolute;
+            top: 100%;
+        }
+        @keyframes credits {
+            0% {
+                top: 100%;
+            }
+            100% {
+                top: -500%;
+            }
+        }
+
+        h1, h2, h3 {
+            font-size: 2em;
+        }
+        dt {
+            margin-bottom: 5px;
+            margin-top: 50px;
+            font-size: .8em;
+        }
+        dt:first-child {
+            margin-top: 0;
+        }
+        dd {
+            margin-bottom: 5px;
+            font-size: 1.2em;
+        }
+
+        .fade-in-text {
+            animation: fadeIn 4s 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .fade-out-text {
+            animation: fadeOut 4s 1;
+            font-size: 60px;
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        .last {
+            font-size: 4em;
+        }
+
+        .delay-1 { animation-delay: 0s; }
+        .delay-2 { animation-delay: 4s; }
+        .delay-3 { animation-delay: 8s; }
+        .delay-last { animation-delay: 22s; }
+
+        .hidden { opacity: 0; }
+    </style>
+</head>
+<body>
+
+    <h1 class="delay-1 fade-in-text fade-out-text">Altitude 2023 Demo</h1>
+    <h2 class="delay-2 fade-in-text fade-out-text hidden">Redesigned homepage<br>Simplified service creation<br>Your site on Fastly</h2>
+    <h3 class="delay-3 fade-in-text fade-out-text hidden">Brought to you by Core Systems Engineering and the Product team</h3>
+
+    <div class="wrapper">
+        <dl>
+            <dt>Leadership</dt>
+            <dd>Ines Sombra</dd>
+            <dd>Laura Thompson</dd>
+            <dd>Travis Sanders</dd>
+            <dd>Estella Gonzalez Madison</dd>
+            <dd>Elize Selvarajah</dd>
+            <dd>Jennifer Fleming</dd>
+            <dd>Gomathi Rajesh</dd>
+            <dd>Brad Benvenuti</dd>
+            <dd>Alexander Bergman</dd>
+            <dd>Andrew Betts</dd>
+            
+            <dt>Redesigned homepage engineering team</dt>
+            <dd>Phi Dong</dd>
+            <dd>Alfonce Nzioka</dd>
+            <dd>Journie Johnson</dd>
+            <dd>Luis Flores Martinez</dd>
+            <dd>Jeneve Parrish</dd>
+            <dd>Alex Petrov</dd>
+            <dd>Geoffrey Schorkopf</dd>
+            <dd>Abigail Kaunda</dd>
+            <dd>Solomon Tang</dd>
+
+            <dt>Simplified service creation engineering team</dt>
+            <dd>Phi Dong</dd>
+            <dd>Alfonce Nzioka</dd>
+            <dd>Journie Johnson</dd>
+            <dd>Luis Flores Martinez</dd>
+
+            <dt>Your site on Fastly</dt>
+            <dd>Dora Militaru</dd>
+            
+            <dt>Product</dt>
+            <dd>Jonathan Speek</dd>
+            <dd>Simon Wistow</dd>
+
+            <dt>Product Design</dt>
+            <dd>Brian Clay</dd>
+            
+            <dt>Program Management</dt>
+            <dd>Lisa Stover</dd>
+
+            <dt>Documentation</dt>
+            <dd>Gaylin Walli</dd>
+            
+            <dt>Bubb's Location Finder built on Compute</dt>
+            <dd>Simon Wistow</dd>
+            <dd>Thom Mahoney</dd>
+            
+            <dt>Bubb's Website</dt>
+            <dd>Jonathan Speek</dd>
+            <dd>Brian Clay</dd>
+        </dl>
+    </div>
+
+    <div class="last hidden delay-last fade-in-text">Thank you and congratulations 🎉</div>
+</body>
+</html>
